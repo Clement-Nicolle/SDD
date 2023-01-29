@@ -1,5 +1,4 @@
 from sklearn.linear_model import LinearRegression
-import question1
 
 def regressor(Y, X):
     lr = LinearRegression()
