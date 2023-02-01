@@ -11,8 +11,8 @@ def D_lin_efficient(losses, w):
     batch_1 = losses[0::2]
     batch_2 = losses[1::2]
     
-    grad_1 = grad(batch_1.mean(), dummy_w, create_graph=True)[0] 
-    grad_2 = grad(batch_2.mean(), dummy_w, create_graph=True)[0] 
+    grad_1 = grad(batch_1.mean(), w, create_graph=True)[0] 
+    grad_2 = grad(batch_2.mean(), w, create_graph=True)[0] 
     
     #As the result grad_1 * grad_2 is a tensor of shape [1], 
     #we use .sum() to "transform" it into scalar 
